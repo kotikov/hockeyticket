@@ -7,8 +7,12 @@
         "id": "ea80c1a6109495d9",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "content/hockeyticket.me.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -28,6 +32,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "content/hockeyticket.me.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -45,12 +50,12 @@
                   "textFadeMultiplier": -1.7,
                   "nodeSizeMultiplier": 1,
                   "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
+                  "collapse-forces": false,
                   "centerStrength": 0.726495726495727,
                   "repelStrength": 16.2393162393162,
                   "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
+                  "linkDistance": 30,
+                  "scale": 1.1961169353104484,
                   "close": true
                 }
               }
@@ -97,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 538
+    "width": 319
   },
   "right": {
     "id": "32a67aafe5b47e93",
@@ -113,6 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/hockeyticket.me.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,6 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/hockeyticket.me.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,18 +157,59 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "content/hockeyticket.me.md"
+              }
+            }
+          },
+          {
+            "id": "3e0ab9c9e26e2029",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {}
+            }
+          },
+          {
+            "id": "d75541f14d82504a",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {}
+            }
+          },
+          {
+            "id": "70d5b6da20b0e741",
+            "type": "leaf",
+            "state": {
+              "type": "search-result-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "bd5bf1b00a0f83f9",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 406
   },
   "active": "ea80c1a6109495d9",
   "lastOpenFiles": [
+    "content/hockeyticket.me.md",
+    "content/korzina.md",
+    "content/otkaz_ot_otvetstvennosti.md",
+    "content/politika konfidencialnosti.md",
+    "content/personalnie_dannie.md",
+    "README.md",
+    "Untitled.md",
     "hockeyticket.me.md",
     "kalendar_hockey.md"
   ]

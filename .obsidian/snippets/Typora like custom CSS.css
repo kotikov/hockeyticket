@@ -1,0 +1,315 @@
+
+Skip to main content
+Obsidian Forum
+
+Typora like custom CSS
+Share & showcase
+editor-legacy
+ChezFrancois
+Feb '21
+
+Leveraging several proposals to tweak Obsidian and make it behave as nearly as possible from Typora in the edition mode, I came to the following CSS snippet that works wonderfully well, yet staying simple.
+
+Use it at your leisure:
+
+/* inline formatting, link targets and [[ ]] disappears if not active line*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-string.cm-url,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link:not(.cm-link),
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-barelink,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-comment
+{ display: none; }
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-tag {
+  display: none !important;
+} 
+
+/* hide all html tags -- IT IS COMMENTED OUT BY DEFAULT */
+/* div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-tag{ display: none; } */
+
+
+/* except list markers */ span.cm-formatting-list,
+/*code block backticks */ span.cm-formatting-code-block.cm-hmd-codeblock,
+
+/* and task checkboxes */
+/*span.cm-formatting-task { display: inline !important; font-family: monospace; }
+
+/* Checkboxes instead of brackets in edit mode */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property {
+    color: transparent;
+    position: relative;
+    display: inline !important;
+    margin-right: -0.1rem;
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta:after,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
+    content: "○";
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    color: rgb(219, 95, 12);
+    font-size: 18px;
+}
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
+  content: "✓";
+  color: rgb(124, 131, 124) !important;
+}
+span.cm-formatting-task.cm-property ~ span {
+  text-decoration: line-through;
+  color: rgb(124, 131, 124) !important;
+}
+
+/* except image markdown */
+.CodeMirror-line span.cm-formatting.cm-formatting-image.cm-image.cm-image-alt-text.cm-link,
+.CodeMirror-line span.cm-formatting.cm-formatting-image.cm-image.cm-image-marker {
+  display: inline !important;
+}
+
+/* Change links color */
+.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link {
+    color: rgb(15, 112, 223);
+    text-decoration: underline;
+  }
+
+/* Editor Mode Tables */
+.CodeMirror pre.HyperMD-table-row {
+    font-family: var(--font-monospace);
+    font-size: calc(var(--font-normal) - 1px);
+  }
+
+/* Tables */
+
+.markdown-preview-view th {
+    font-weight: var(--bold-weight);
+    text-align: left;
+    border-top: none;
+  }
+  .markdown-preview-view th:last-child,
+  .markdown-preview-view td:last-child {
+    border-right: none;
+  }
+  .markdown-preview-view th:first-child,
+  .markdown-preview-view td:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+  .markdown-preview-view tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Blockquote: in edit mode with left border rendered instead of > */
+  div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting.cm-formatting-quote,
+  div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-indent-in-quote {
+    display: inline !important;
+    color: transparent !important;
+  }
+  
+  div:not(.CodeMirror-activeline)>.HyperMD-quote {
+      background-color:rgb(238, 234, 234);
+      border-left: 3px solid var(--text-selection);
+      border-color: rgba(255, 0, 0, 0.589) !important; 
+      border-radius: 0 8px 8px 0;
+      font-size: 17px;
+      line-height: 1.5em;
+      margin-left: 5px;
+      padding: 8px 18px 8px 8px; /* Haut, Droite, Bas, Gauche */
+      display: inline-block;
+  }
+
+  /* Tag pills in edit mode */
+   div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
+    content: '';
+  }
+  .tag, div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end {
+  background-color: rgb(30, 123, 177); /* was var(--text-accent); */
+  border: none;
+  color: white !important;
+  font-size: 14px;
+  padding: 2px 8px;
+  padding-top: -2px;
+  padding-bottom: 3px;
+  text-align: center;
+  /*text-decoration: underline;
+  /*text-decoration: none !important;*/
+  display: inline-block;
+  margin: 1px 1px;
+  cursor: pointer;
+  border-radius: 7px;
+  }
+  .tag:hover {
+  color: white;
+  background-color: var(--text-accent-hover);
+  }
+
+/* Horizontal line in edit mode. Changes --- to full-width line */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
+  color: transparent;
+}
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr::after {
+  content: "";
+  position: absolute;
+  background: rgb(102, 101, 101);
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+}
+
+/* some space above titles */
+span.cm-header {
+  margin-top: 6px;
+  display: inline-block;
+}
+span.cm-header.cm-header-5, span.cm-header.cm-header-6 {
+  margin-top: 3px;
+}
+
+    created
+    Feb '21
+    last reply
+    Aug '21
+    27
+    replies
+    4.8k
+    views
+    17
+    users
+    58
+    likes
+    6
+    links
+    6
+
+Fastidious
+Feb '21
+
+I use Typora, yet I don’t understand what your snippet is meant to accomplish. Can you explain, or provide screenshots? Thanks!
+ChezFrancois
+Feb '21
+
+You’re right Fastidious, I have been rather short in explanations.
+Here below you will find the before/after screenshots, and a short “How to”
+Before (native Obsidian editor User Interface):
+
+Capture d’écran 2021-02-11 à 21.08.27
+Capture d’écran 2021-02-11 à 21.08.27696×856 95.6 KB
+
+After (editor UI using the CSS Snippet, see How to below):
+Capture d’écran 2021-02-11 à 21.07.36
+Capture d’écran 2021-02-11 à 21.07.36696×902 95 KB
+
+The active line changes back to standard Markdown automatically:
+Capture d’écran 2021-02-11 à 21.07.55
+
+Capture d’écran 2021-02-11 à 21.08.01
+
+Capture d’écran 2021-02-11 à 21.08.09
+Short How To
+
+In Obsidian parameters
+
+    go to the “Appearance” part
+    at the end of the parameters, there is the “CSS snippets” part
+    you can access the folder where those CSS files are stored by clicking on the folder icon next to the title “CSS snippets”.
+    create a CSS file in this folder, copy paste the exact content of the CSS code shared in my initial post, in this file
+    save it
+    go back to the parameters, update (click on the icon with the two arrow circling to one another)
+    you will see the name of the file you just created appearing
+    activate it
+    that is it. Your editor UI will behave nearly like Typora (not as clean, but it made the full switch possible for me)
+
+Note: the difference with Typora is much bigger for tables. This CSS snippet makes them easier to read, but not much simpler to edit. Here is a screenshot of a table in edition mode, when this snippet of CSS code is activated:
+Capture d’écran 2021-02-11 à 21.19.01
+Capture d’écran 2021-02-11 à 21.19.01749×177 12.4 KB
+
+Note: you can change the color of the checkboxes, links or the horizontal line which is displayed instead of just “—” in standard editor UI.
+Hope that answers your question.
+Archie
+Feb '21
+
+That’s wonderful. I hope devs make this available on core Obsidian soon, but for now this would do the job. I must try this specially on tables since you said that part is not perfect tho
+Fastidious
+ChezFrancois
+Feb '21
+
+Very well done! Thank you for the screenshots, and descriptions. Using it right now. :slight_smile:
+afokapu
+Supporter
+ChezFrancois
+Feb '21
+
+What about images and videos?
+How are they handled ?
+Klaas
+Insider
+Feb '21
+
+@afokapu: the Edit mode does NOT render them as videos and images, they remain as links. Only in Preview will they be rendered.
+axcraig
+Supporter
+Feb '21
+
+This is awesome! Thanks
+bepolymathe
+Supporter
+axcraig
+Feb '21
+
+How you make installation ?
+axcraig
+Supporter
+Feb '21
+
+As above:
+
+    Short How To
+
+    In Obsidian parameters
+
+        go to the “Appearance” part
+        at the end of the parameters, there is the “CSS snippets” part
+        you can access the folder where those CSS files are stored by clicking on the folder icon next to the title “CSS snippets”.
+        create a CSS file in this folder, copy paste the exact content of the CSS code shared in my initial post, in this file
+        save it
+        go back to the parameters, update (click on the icon with the two arrow circling to one another)
+        you will see the name of the file you just created appearing
+        activate it
+        that is it. Your editor UI will behave nearly like Typora (not as clean, but it made the full switch possible for me)
+
+2 months later
+1 month later
+1 month later
+Hello! Looks like you’re enjoying the discussion, but you haven’t signed up for an account yet.
+
+When you create an account, we remember exactly what you’ve read, so you always come right back where you left off. You also get notifications, here and via email, whenever someone replies to you. And you can like posts to share the love. heartpulse
+no thanks
+Suggested Topics
+Topic 	Replies 	Views 	Activity
+Dataview plugin snippet showcase
+Share & showcase
+dataview
+	
+66.8k 	13d
+New plugin: Readwise
+Share & showcase
+plugin-release
+	
+2.9k 	Aug '21
+Obsidian Roundup - weekly newsletter for tips, news & resources
+Share & showcase
+	
+3.8k 	5d
+[Mobile] Syncing Vault with Dropsync on Android
+Share & showcase
+	
+2.4k 	Oct '21
+How to add a CSS snippet when you already have a Theme installed
+Share & showcase
+custom-css
+	
+447 	10d
+Want to read more? Browse other topics in Share & showcase or view latest topics.
+
