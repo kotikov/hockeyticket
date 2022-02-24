@@ -55,9 +55,19 @@
                   "repelStrength": 16.2393162393162,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 1.1961169353104484,
+                  "scale": 0.9999999999999997,
                   "close": true
                 }
+              }
+            }
+          },
+          {
+            "id": "e3111aa718c7ecbb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/hockeyticket.me.md"
               }
             }
           }
@@ -113,23 +123,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8b06f2a48f7ecbe7",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "content/hockeyticket.me.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "98c57b3b6ebdaadf",
             "type": "leaf",
             "state": {
@@ -151,43 +144,33 @@
                 "useHierarchy": true
               }
             }
-          },
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "da32ac956119a5c4",
+        "type": "tabs",
+        "children": [
           {
-            "id": "e3111aa718c7ecbb",
+            "id": "8b06f2a48f7ecbe7",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "backlink",
               "state": {
-                "file": "content/hockeyticket.me.md"
+                "file": "content/hockeyticket.me.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "3e0ab9c9e26e2029",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_nodes",
-              "state": {}
-            }
-          },
-          {
-            "id": "d75541f14d82504a",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_style",
-              "state": {}
-            }
-          },
-          {
-            "id": "70d5b6da20b0e741",
-            "type": "leaf",
-            "state": {
-              "type": "search-result-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "bd5bf1b00a0f83f9",
+            "id": "d4e44c33612e2261",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -195,11 +178,11 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 406
+    "width": 289
   },
   "active": "ea80c1a6109495d9",
   "lastOpenFiles": [
