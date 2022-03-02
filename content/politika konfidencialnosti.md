@@ -1,3 +1,3 @@
 ---
-tags: [footer]
+tags: footer
 ---

@@ -1,0 +1,8 @@
+{
+  "debug": false,
+  "extensions": [
+    "css",
+    "edn",
+    "html"
+  ]
+}

@@ -1,5 +1,3 @@
 ---
-tags: [footer]
+tags: footer
 ---
-
--

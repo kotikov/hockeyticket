@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "content/hockeyticket.me.md",
+            "file": "content/match page 005.md",
             "mode": "source",
             "source": false
           }
@@ -25,6 +25,7 @@
       {
         "id": "13b58ebc2fd55acb",
         "type": "tabs",
+        "dimension": 48.57142857142857,
         "children": [
           {
             "id": "abf8e1284ae872aa",
@@ -32,7 +33,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "content/hockeyticket.me.md",
+                "file": "content/match page 005.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -45,17 +46,17 @@
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
                   "colorGroups": [],
-                  "collapse-display": true,
+                  "collapse-display": false,
                   "showArrow": true,
                   "textFadeMultiplier": -1.7,
                   "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": false,
+                  "lineSizeMultiplier": 3.61794871794872,
+                  "collapse-forces": true,
                   "centerStrength": 0.726495726495727,
                   "repelStrength": 16.2393162393162,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.9999999999999997,
+                  "scale": 1.1961169353104466,
                   "close": true
                 }
               }
@@ -67,7 +68,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/hockeyticket.me.md"
+                "file": "content/match page 005.md"
               }
             }
           }
@@ -76,6 +77,7 @@
       {
         "id": "a0d81c0f91f437c9",
         "type": "tabs",
+        "dimension": 51.42857142857142,
         "children": [
           {
             "id": "6a3935d9aac8a225",
@@ -91,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:react",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -108,12 +110,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 319
+    "width": 443
   },
   "right": {
     "id": "32a67aafe5b47e93",
@@ -129,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/hockeyticket.me.md",
+                "file": "content/match page 005.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,22 +146,6 @@
                 "useHierarchy": true
               }
             }
-          },
-          {
-            "id": "b88ca3c25ce9dea5",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_nodes",
-              "state": {}
-            }
-          },
-          {
-            "id": "a223cc7e0c759144",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_style",
-              "state": {}
-            }
           }
         ],
         "currentTab": 1
@@ -175,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/hockeyticket.me.md",
+                "file": "content/match page 005.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,32 +170,25 @@
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "d4e44c33612e2261",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 289
+    "width": 214,
+    "collapsed": true
   },
   "active": "ea80c1a6109495d9",
   "lastOpenFiles": [
+    "content/match page 005.md",
+    "content/match page 004.md",
+    "content/match page 003.md",
+    "content/match page 002.md",
+    "content/match page 001.md",
     "content/hockeyticket.me.md",
-    "content/korzina.md",
     "content/otkaz_ot_otvetstvennosti.md",
     "content/politika konfidencialnosti.md",
     "content/personalnie_dannie.md",
-    "README.md",
-    "Untitled.md",
-    "hockeyticket.me.md",
-    "kalendar_hockey.md"
+    "content/korzina.md"
   ]
 }
